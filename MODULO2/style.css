@@ -1,0 +1,22 @@
+.azul {color:blue}
+.bordep {margin-bottom: 1em;}
+.bordexl {margin-bottom: 6em;}
+.fondoclaro {background-color: #f5d9d3;}
+.nombreperfil {padding-left: 2em;}
+.botoncontactar {left: 100px;}
+.test {border-radius: 100px}
+
+.perfil{
+    position:absolute;
+    top: 560px;
+    left : 80px;
+    z-index: 1;
+  }
+  
+  .portada
+  {
+    position:absolute;
+    height:300px;
+    width:300px;
+    z-index: -1;
+  }
