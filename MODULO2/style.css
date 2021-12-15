@@ -2,14 +2,14 @@
 .bordep {margin-bottom: 1em;}
 .bordexl {margin-bottom: 6em;}
 .fondoclaro {background-color: #f5d9d3;}
-.nombreperfil {padding-left: 2em;}
+.nombreperfil {text-align: center;}
 .botoncontactar {left: 100px;}
 .test {border-radius: 100px}
 
 .perfil{
     position:absolute;
-    top: 560px;
-    left : 80px;
+    top: 550px;
+    left : 120px;
     z-index: 1;
   }
   
