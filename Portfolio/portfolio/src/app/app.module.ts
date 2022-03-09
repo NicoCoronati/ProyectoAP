@@ -4,12 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ButtonComponent } from './componentes/button/button.component';
+import { AboutComponent } from './componentes/about/about.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { CertificacionesComponent } from './componentes/certificaciones/certificaciones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ButtonComponent
+    ButtonComponent,
+    AboutComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HabilidadesComponent,
+    CertificacionesComponent,
   ],
   imports: [
     BrowserModule
