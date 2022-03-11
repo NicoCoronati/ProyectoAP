@@ -1,0 +1,14 @@
+
+    button {
+    background-color: #8ebf42;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 10%;
+    }
+
+    button:hover {
+    opacity: 0.8;
+    }
