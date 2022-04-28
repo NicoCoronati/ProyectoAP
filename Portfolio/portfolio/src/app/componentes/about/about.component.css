@@ -12,6 +12,13 @@
     
   }
 
+  .botonG {
+    text-align: right;
+    border-radius: 60%;
+    border-color: black;
+    background-color: black;
+  }
+
   .testmarg {
     margin-top: -60px;
   }
