@@ -1,0 +1,20 @@
+/*body {
+    background: #dd5e89;
+    background: -webkit-linear-gradient(to left, #dd5e89, #f7bb97);
+    background: linear-gradient(to left, #dd5e89, #f7bb97);
+    min-height: 100vh;
+  }
+*/
+
+body {
+    background: #dd5e89;
+    background: -webkit-linear-gradient(to bottom right, #D45BA1, #A784E0);
+    background: linear-gradient(to bottom right, #D45BA1, #A784E0);
+    min-height: 100vh;
+  }
+
+.flexspace {
+  display: flex;
+  justify-content: space-between;
+  }
+  

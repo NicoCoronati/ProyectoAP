@@ -1,25 +1,51 @@
+
+
 <div class="container">
-<div class="p-md-5 mb-4 text-white rounded bg-dark testmarg">
+  <div class="row">
+<div class="col-12 col-sm-12 col-md-12  p-md-5 mb-4 text-white rounded bg-dark testmarg">
     <div class="col-md-6 px-0">
      <!-- <div class=" p-md-2 mb-4 pt-5 banner rounded bg-dark"> -->
         <img src="../assets/images/Perfil.png" alt="perfil" class="user img-thumbnail"/>
 
 
         <div class="container testlado">
-        <h1 class="display-6 col-md-8">Nicolás Coronati 
+          
+        <h1 id ="Nombre" class="display-6 col-md-8">Nicolás Coronati 
+          
           <p class="lead my-6">Full Stack Developer Jr</p> </h1>
-        
+
         
         <div class="col-md-12 p-4 mb-3 bg-secondary rounded ml-2" >
-        <h4 class="fst-italic">Acerca de mí</h4>
-              <p class="">Soy estudiante de Ingeniería en Sistemas en la UTN FRC, tengo 21 años, me gusta programar desde los 11 años, momento que quise tener mi propio Argentum Online, practique atletismo a un nivel competitivo y me gusta mucho la música.       ?¿??¿</p>
+        <h4 class="fst-italic flexspace">Acerca de mí
+          <a href="#" class="btn btn-primary botonG" role="button" data-toggle="collapse" data-target="#"> <i class="fa fa-pencil" data-toggle="modal" data-target="#editaacerca"></i></a>
+        </h4>
+          <div class="btn-edit">
+            <app-button class=""
+            
+              color="{{'black'}}"
+              text="{{'Editar'}}"
+              (btnClick)="cambiar_parrafo()">
+              
+            </app-button>
+            
+            <div>
+              <p id="textacercade" class="">{{textacercade}}</p>
         </div>
-            </div>
+        <div>
+          <input id="editacercade" type="text" onchange="myFunction2(this.value)" style="display:none">
+          <app-button 
+              color="{{'black'}}"
+              text="{{'Cambiar'}}"
+              (btnClick)="cambiar_parrafo()">
+            </app-button>
+        </div>
+          
+        </div>
 
         </div>
         
     
     </div>
   </div>
-  
+</div>
 <!-- </div> -->
