@@ -11,6 +11,7 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { CertificacionesComponent } from './componentes/certificaciones/certificaciones.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginComponent } from './componentes/login/login.component';
     LoginComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
