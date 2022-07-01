@@ -10,9 +10,9 @@
 
         <div class="container testlado">
           
-        <h1 id ="Nombre" class="display-6 col-md-8">Nicolás Coronati 
+        <h1 id ="Nombre" class="display-6 col-md-8">{{persona.nombre}} {{persona.apellido}}
           
-          <p class="lead my-6">Full Stack Developer Jr</p> </h1>
+          <p class="lead my-6">{{persona.ocupacion}}</p> </h1>
 
         
         <div class="col-md-12 p-4 mb-3 bg-secondary rounded ml-2" >
@@ -29,7 +29,7 @@
             </app-button>
             
             <div>
-              <p id="textacercade" class="">{{textacercade}}</p>
+              <p id="textacercade" class="">{{persona.sobre_mi}}</p>
         </div>
         <div>
           <input id="editacercade" type="text" onchange="myFunction2(this.value)" style="display:none">
