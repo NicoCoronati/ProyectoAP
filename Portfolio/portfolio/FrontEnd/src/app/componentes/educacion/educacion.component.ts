@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { educ } from 'src/app/model/educ.model';
+import { EducService } from 'src/app/servicios/educ.service';
 
 @Component({
   selector: 'app-educacion',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacionComponent implements OnInit {
 
-  constructor() { }
+  educ: educ[] = [];
+
+  constructor(public educService: EducService) { }
 
   ngOnInit(): void {
+    //subscribe conecta al observable, escucha cambios y cuando se hacen los pasa al service
+    this.educService.getListaEducacion().subscribe(data => {this.educ = data})
   }
 
 }
