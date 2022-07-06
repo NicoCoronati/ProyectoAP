@@ -18,13 +18,11 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Educacion {
+public class Certificacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre_escuela;
-    private String url_foto;
-    private String titulo;
-    private String fecha;
+    private String nombre;
+    private String nombre_academia;
     
 }

@@ -5,9 +5,13 @@ export class educ{
     nombre_escuela: String;
     url_foto: String;
 
+    titulo: String;
+    fecha: String;
 
-    constructor(nombre_escuela: String, url_foto: String){
+    constructor(nombre_escuela: String, url_foto: String, titulo: String, fecha: String){
         this.nombre_escuela = nombre_escuela;
         this.url_foto = url_foto;
+        this.titulo = titulo;
+        this.fecha = fecha;
     }
 }
