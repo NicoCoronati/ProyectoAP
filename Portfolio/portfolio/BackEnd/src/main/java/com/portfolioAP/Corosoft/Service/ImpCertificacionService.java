@@ -20,8 +20,8 @@ public class ImpCertificacionService implements ICertificacionService{
     }
 
     @Override
-    public void saveCertificacion(Certificacion educacion) {
-        icertificacionRepository.save(educacion);
+    public void saveCertificacion(Certificacion certificacion) {
+        icertificacionRepository.save(certificacion);
     }
 
     @Override
