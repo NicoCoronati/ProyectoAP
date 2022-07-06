@@ -1,8 +1,8 @@
 
 package com.portfolioAP.Corosoft.Controller;
 
-import com.portfolioAP.Corosoft.Entity.Certificacion;
-import com.portfolioAP.Corosoft.Interface.ICertificacionService;
+import com.portfolioAP.Corosoft.Entity.Habilidad;
+import com.portfolioAP.Corosoft.Interface.IHabilidadService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,41 +19,41 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http://localhost:4200")
 public class HabilidadController {
     @Autowired 
-    private ICertificacionService IcertificacionService;
+    private IHabilidadService IhabilidadService;
     
-    @GetMapping("/certificaciones/traer")
-    public List<Certificacion> getCertificacion(){
-        return IcertificacionService.getCertificacion();
+    @GetMapping("/habilidades/traer")
+    public List<Habilidad> getHabilidad(){
+        return IhabilidadService.getHabilidad();
     }
     
-    @PostMapping("/certificaciones/crear")
-    public String createCertificacion(@RequestBody Certificacion certificacion){
-        IcertificacionService.saveCertificacion(certificacion);
-        return "La certificación se creo con éxito";
+    @PostMapping("/habilidades/crear")
+    public String createHabilidad(@RequestBody Habilidad habilidad){
+        IhabilidadService.saveHabilidad(habilidad);
+        return "La habilidad se creo con éxito";
     }
     
-    @DeleteMapping("/certificaciones/borrar/{id}")
-    public String deleteCertificacion(@PathVariable Long id){
-        IcertificacionService.deleteCertificacion(id);
-        return "La certificación fue eliminada";
+    @DeleteMapping("/habilidades/borrar/{id}")
+    public String deleteHabilidad(@PathVariable Long id){
+        IhabilidadService.deleteHabilidad(id);
+        return "La habilidad fue eliminada";
     }
     
-    @PutMapping("/certificaciones/editar/{id}")
-    public Certificacion editCertificacion(@PathVariable Long id,
+    @PutMapping("/habilidades/editar/{id}")
+    public Habilidad editHabilidad(@PathVariable Long id,
                                 @RequestParam("nombre") String nuevoNombre,
-                                @RequestParam("nombre_academia") String nuevoNombreAcad) {
-        Certificacion certificacion = IcertificacionService.findCertificacion(id);
+                                @RequestParam("porcentaje") int nuevoPorcentaje) {
+        Habilidad habilidad = IhabilidadService.findHabilidad(id);
         
-        certificacion.setNombre(nuevoNombre);
-        certificacion.setNombre_academia(nuevoNombreAcad);
+        habilidad.setNombre(nuevoNombre);
+        habilidad.setPorcentaje(nuevoPorcentaje);
         
-        IcertificacionService.saveCertificacion(certificacion);
-        return certificacion;
+        IhabilidadService.saveHabilidad(habilidad);
+        return habilidad;
     }
     
-    @GetMapping("/certificaciones/traer/perfil/{id}")
-    public Certificacion findCertificacion(@PathVariable Long id){
-        return IcertificacionService.findCertificacion(id);
+    @GetMapping("/habilidades/traer/perfil/{id}")
+    public Habilidad findHabilidad(@PathVariable Long id){
+        return IhabilidadService.findHabilidad(id);
     }
     
 }

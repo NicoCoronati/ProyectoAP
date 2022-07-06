@@ -23,6 +23,6 @@ public class Habilidad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private String nombre_academia;
+    private int porcentaje;
     
 }

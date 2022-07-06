@@ -2,6 +2,58 @@
     <div class="p-md-5 mb-4 text-white rounded bg-dark testmarg">
         <div class="col-md-4 px-0 flexbox">
             <h1 class="display-6 col-md-8">Habilidades</h1>
+
+            <div class="wrapper">
+              <ul  *ngFor="let unaHabilidad of habilidades" >
+              <div class="p-2"><h5 class="medio">{{unaHabilidad.nombre}}</h5>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{unaHabilidad.porcentaje}}"></div></div>
+              </ul>
+            </div>
+
+            <!--
+            <div class="wrapper">
+              <div class="p-2"><h5 class="medio">{{habilidades[0].nombre}}</h5>
+                <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div></div>
+                <div class="p-2"><h5 class="medio">{{habilidades[1].nombre}}</h5>
+                  <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div></div>
+                  <div class="p-2"><h5 class="medio">{{habilidades[2].nombre}}</h5>
+                    <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div></div>
+                    <div class="p-2"><h5 class="medio">{{habilidades[3].nombre}}</h5>
+                      <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div></div>
+                      <div class="p-2"><h5 class="medio">{{habilidades[4].nombre}}</h5>
+                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div></div>
+              <h5 class="medio">{{habilidades[0].nombre}}</h5>
+              <h5 class="medio">{{habilidades[1].nombre}}</h5>
+              <h5 class="medio">{{habilidades[2].nombre}}</h5>
+              <h5 class="medio">{{habilidades[3].nombre}}</h5>
+              <h5 class="medio">{{habilidades[4].nombre}}</h5>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[0].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[1].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[2].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[3].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[4].porcentaje}}"></div>
+              <h5 class="medio">{{habilidades[5].nombre}}</h5>
+              <h5 class="medio">{{habilidades[6].nombre}}</h5>
+              <h5 class="medio">{{habilidades[7].nombre}}</h5>
+              <h5 class="medio">{{habilidades[8].nombre}}</h5>
+              <h5 class="medio">{{habilidades[9].nombre}}</h5>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[5].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[6].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[7].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[8].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[9].porcentaje}}"></div>
+              <h5 class="medio">{{habilidades[10].nombre}}</h5>
+              <h5 class="medio">{{habilidades[11].nombre}}</h5>
+              <h5 class="medio">{{habilidades[12].nombre}}</h5>
+              <h5 class="medio">{{habilidades[13].nombre}}</h5>
+              <h5 class="medio">{{habilidades[14].nombre}}</h5>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[10].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[11].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[12].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[13].porcentaje}}"></div>
+              <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidades[14].porcentaje}}"></div>
+            </div>
+
             <div class="d-flex flex-row">
                 <div class="p-2"><h5 class="medio">HTML</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 <div class="p-2"><h5 class="medio">CSS</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
@@ -11,7 +63,7 @@
 
                 
               </div>
-              <div class="d-flex flex-row"> <!--BLANDAS-->
+              <div class="d-flex flex-row"> BLANDAS 
                 <div class="p-2"><h5 class="medio">Creatividad</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 <div class="p-2"><h5 class="medio">Responsabilidad</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 <div class="p-2"><h5 class="medio">Negociación</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
@@ -20,7 +72,7 @@
                 
               </div>
 
-              <div class="d-flex flex-row"> <!--DURAS-->
+              <div class="d-flex flex-row"> DURAS
                 <div class="p-2"><h5 class="medio">Conocimiento técnico</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 <div class="p-2"><h5 class="medio">Comprensión lectora</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 <div class="p-2"><h5 class="medio">Pensamiento analítico</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
@@ -28,6 +80,8 @@
                 <div class="p-2"><h5 class="medio">IT?</h5><div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="--value:50"></div></div>
                 
               </div>
+
+            -->
 
         </div>
 

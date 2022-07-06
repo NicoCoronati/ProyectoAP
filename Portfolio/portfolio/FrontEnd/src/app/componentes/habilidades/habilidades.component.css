@@ -46,3 +46,13 @@
   .medio {
       text-align: center;
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+
+  ul {
+    padding-left: 0px;
+  }

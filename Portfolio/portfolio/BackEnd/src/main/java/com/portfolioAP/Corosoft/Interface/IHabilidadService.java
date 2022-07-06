@@ -1,20 +1,20 @@
 
 package com.portfolioAP.Corosoft.Interface;
 
-import com.portfolioAP.Corosoft.Entity.Certificacion;
+import com.portfolioAP.Corosoft.Entity.Habilidad;
 import java.util.List;
 
 
 public interface IHabilidadService {
-    //Traer Certificacion
-    public List<Certificacion> getCertificacion();
+    //Traer Habilidad
+    public List<Habilidad> getHabilidad();
     
-    //Guardar objeto Certificacion
-    public void saveCertificacion(Certificacion educacion);
+    //Guardar objeto Habilidad
+    public void saveHabilidad(Habilidad habilidad);
     
-    //Borrar objeto Certificacion por id
-    public void deleteCertificacion(Long id);
+    //Borrar objeto Habilidad por id
+    public void deleteHabilidad(Long id);
     
-    //Buscar Certificacion por id
-    public Certificacion findCertificacion(Long id);
+    //Buscar Habilidad por id
+    public Habilidad findHabilidad(Long id);
 }
