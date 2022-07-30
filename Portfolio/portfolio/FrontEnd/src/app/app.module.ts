@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './componentes/header/header.component';
 import { ButtonComponent } from './componentes/button/button.component';
 import { AboutComponent } from './componentes/about/about.component';
@@ -12,6 +13,9 @@ import { CertificacionesComponent } from './componentes/certificaciones/certific
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './componentes/home/home.component';
+import { FormsModule }   from '@angular/forms';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,17 @@ import { HttpClientModule } from '@angular/common/http';
     CertificacionesComponent,
     ProyectosComponent,
     LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
