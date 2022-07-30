@@ -6,6 +6,7 @@ import com.portfolioAP.Corosoft.Interface.IProyectoService;
 import java.util.List;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,18 +28,21 @@ public class ProyectoController {
         return IproyectoService.getProyecto();
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/proyectos/crear")
     public String createProyecto(@RequestBody Proyecto proyecto){
         IproyectoService.saveProyecto(proyecto);
         return "El proyecto se creo con éxito";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/proyectos/borrar/{id}")
     public String deleteProyecto(@PathVariable Long id){
         IproyectoService.deleteProyecto(id);
         return "El proyecto fue eliminada";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/proyectos/editar/{id}")
     public Proyecto editProyecto(@PathVariable Long id,
                                 @RequestParam("nombre") String nuevoNombre,

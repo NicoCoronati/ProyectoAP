@@ -5,6 +5,7 @@ import com.portfolioAP.Corosoft.Entity.Educacion;
 import com.portfolioAP.Corosoft.Interface.IEducacionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,18 +27,21 @@ public class EducacionController {
         return ieducacionService.getEducacion();
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/educaciones/crear")
     public String createEducacion(@RequestBody Educacion educacion){
         ieducacionService.saveEducacion(educacion);
         return "La educación se creo con éxito";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/educaciones/borrar/{id}")
     public String deleteEducacion(@PathVariable Long id){
         ieducacionService.deleteEducacion(id);
         return "La educación fue eliminada";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/educaciones/editar/{id}")
     public Educacion editEducacion(@PathVariable Long id,
                                 @RequestParam("nombre_escuela") String nuevoNombre,

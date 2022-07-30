@@ -44,6 +44,14 @@ public class UsuarioPrincipal implements UserDetails{
     public String getPassword() {
         return password;
     }
+    
+    public String getEmail() {
+        return email;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
 
     @Override
     public String getUsername() {
