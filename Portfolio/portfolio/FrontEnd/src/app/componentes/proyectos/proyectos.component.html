@@ -6,7 +6,18 @@
             <div class="container testlado">
             <h1 class="display-6 col-md-8">Proyectos</h1>
             
-            
+            <div  *ngFor="let unProyecto of proyectos" >
+                <div class=" p-4 mb-3 bg-secondary rounded" >
+                    <p class=""> {{unProyecto.nombre}}</p>
+                    <p> {{unProyecto.fecha}}</p>
+                    <p>{{unProyecto.parrafo}}</p>
+                    <a class="btn purpura" href="{{unProyecto.url}}" target="_blank" role="button">Visitar</a>
+                    <img src="{{unProyecto.url_foto}}" />
+              </div>
+
+            </div>
+
+            <!--
             <div class=" p-4 mb-3 bg-secondary rounded" >
                   <p class=""> Portfolio Web #YoProgramo</p>
                   <p>Noviembre 2021 - Mayo 2022</p>
@@ -49,6 +60,7 @@
             <p>
                     <a class="btn purpura" href="https://jueg0z.jimdofree.com/" target="_blank" role="button">Visitar Jueg0z</a>
         </div>
+        -->
 
 
                 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { habilidad } from 'src/app/model/habilidad.model';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesComponent implements OnInit {
 
-  constructor() { }
+  habilidades: habilidad[] = [];
+
+  constructor(public habilidadService: HabilidadService) { }
 
   ngOnInit(): void {
+    //subscribe conecta al observable, escucha cambios y cuando se hacen los pasa al service
+    this.habilidadService.getListaHabilidad().subscribe(data => {this.habilidades = data})
   }
 
 }

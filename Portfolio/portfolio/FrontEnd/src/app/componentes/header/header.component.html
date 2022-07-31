@@ -31,9 +31,9 @@
       </a>
       
       <app-button 
-        color="{{login ? 'red' : 'green'}}"
-          text="{{login ? 'Logout' : 'Login'}}"
-          (btnClick)="toggleAddTask()"
+        color="{{isLogged ? 'red' : 'green'}}"
+          text="{{isLogged ? 'Logout' : 'Login'}}"
+          (btnClick)="onLogOut()"
           
       >
       </app-button>
