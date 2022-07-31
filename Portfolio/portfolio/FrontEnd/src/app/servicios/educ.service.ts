@@ -24,9 +24,23 @@ export class EducService {
 
   }
 
-  public getEducacionId(): Observable<educ>{
+  public getEducacionId(id: number): Observable<educ>{
 
-    return this.http.get<educ>(this.URL+'traer/perfil/1');
+    return this.http.get<educ>(this.URL+`traer/perfil/${id}`);
 
   }
+
+
+  public save(educ: educ): Observable<any>{
+    return this.http.post<any>(this.URL + 'crear', educ);
+  }
+
+  public update(id: number, educ: educ): Observable<any>{
+    return this.http.put<any>(this.URL + 'editar/' + id, educ);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete<any>(this.URL + 'borrar/' + id);
+  }
+
 }

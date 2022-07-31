@@ -14,8 +14,11 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { interceptorProvider } from './servicios/interceptor-service';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+
+import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,12 +33,15 @@ import { interceptorProvider } from './servicios/interceptor-service';
     ProyectosComponent,
     LoginComponent,
     HomeComponent,
+    NewEducacionComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [
     interceptorProvider

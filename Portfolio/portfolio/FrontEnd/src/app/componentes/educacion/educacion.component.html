@@ -5,6 +5,12 @@
     
             <div class="container">
             <h1 class="display-6">Educación</h1>
+            <div class="col-lg-2">
+              <button type="button" class="btn btn-dark" routerLink="/nueva_educacion" *ngIf="isLogged">
+                Nueva Educación
+              </button>
+            </div>
+
                     <!---->
                 
                     <ul *ngFor="let unEduc of educ">
@@ -13,7 +19,7 @@
                           
                           <li class="profile-section-card" >
               
-                                <img class="logito" alt="Gráfico Universidad Tecnológica Nacional" aria-hidden="true" src={{unEduc.url_foto}}>
+                                <img class="logito" alt="Logo institucion" aria-hidden="true" src={{unEduc.url_foto}}>
                                       
                                 <div class="">
                                   <h3 class="">
@@ -27,6 +33,18 @@
                                 <span class="">
                                   <time>{{unEduc.fecha}}</time><!---->
                                 </span>
+                                
+                                <div>
+                                <button type="button" class="btn btn-dark" *ngIf="isLogged">
+                                  Editar
+                                </button>
+                                <!--<button class="btn btn-outline-primary" (click)="open(content, unEduc.id)">Editar</button> -->
+
+                                <button type="button" class="btn btn-dark" (click)="deleteEdu(unEduc.id)" *ngIf="isLogged">
+                                  Borrar
+                                </button>
+                              </div>
+                              
                                 </div>
                                 
                           </li>
@@ -34,7 +52,50 @@
                       </div>
                     </ul>      
                   
+                    
+
             </div>
+
+            <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Editar Educación</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div class="modal-body">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="mb-3">
+                    <label for="dateOfBirth">Nombre de la institución</label>
+                    <div class="input-group">
+                    <input type="text" class="form-control" id="nombre_escuela" name="nombre_escuela" [(ngModel)]="unaEduc.nombre_escuela" required>
+                    </div>
+                    <label for="dateOfBirth">URL de logo de la institución</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="url_foto" name="url_foto" [(ngModel)]="unaEduc.url_foto" required>
+                    </div>
+                    <label for="dateOfBirth">Título obtenido</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="unaEduc.titulo" required>
+                    </div>
+                    <label for="dateOfBirth">Fecha desde y fecha hasta</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="unaEduc.fecha" required>
+                    </div>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Guardar</button>
+                  </div>
+                </form>
+              </div>
+              
+            </ng-template>
+            
+            
+            
+            <hr>
+            
+            <pre>{{ closeResult }}</pre>
     
                       
              <!-- Formato piola sin el for 
