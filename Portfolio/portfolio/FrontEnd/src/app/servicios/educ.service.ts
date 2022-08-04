@@ -12,7 +12,7 @@ import { educ } from '../model/educ.model';
 export class EducService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'http://localhost:8080/educaciones/';
+  URL = 'https://mysterious-chamber-26526.herokuapp.com/educaciones/';
   
   
   constructor(private http: HttpClient) { }

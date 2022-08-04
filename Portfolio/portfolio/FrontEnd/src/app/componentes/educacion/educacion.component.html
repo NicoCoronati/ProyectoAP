@@ -9,6 +9,7 @@
               <button type="button" class="btn btn-dark" routerLink="/nueva_educacion" *ngIf="isLogged">
                 Nueva Educación
               </button>
+              
             </div>
 
                     <!---->
@@ -38,8 +39,8 @@
                                 <button type="button" class="btn btn-dark" *ngIf="isLogged">
                                   Editar
                                 </button>
-                                <!--<button class="btn btn-outline-primary" (click)="open(content, unEduc.id)">Editar</button> -->
-
+                                 <button class="btn btn-dark" (click)="open(content, unEduc.id)" *ngIf="isLogged">Editar</button>
+                                
                                 <button type="button" class="btn btn-dark" (click)="deleteEdu(unEduc.id)" *ngIf="isLogged">
                                   Borrar
                                 </button>
