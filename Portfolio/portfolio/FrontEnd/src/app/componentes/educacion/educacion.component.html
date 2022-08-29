@@ -32,15 +32,16 @@
                                       <span class="">{{unEduc.titulo}}</span><!---->      
                                     </h4>
                                 <span class="">
-                                  <time>{{unEduc.fecha}}</time><!---->
+                                  <time>{{unEduc.fecha}}</time>
                                 </span>
                                 
                                 <div>
                                 <button type="button" class="btn btn-dark" routerLink="/editedu/{{unEduc.id}}" *ngIf="isLogged">
                                   Editar
                                 </button>
-                                 <button class="btn btn-dark" (click)="open(content, unEduc.id)" *ngIf="isLogged">Editar</button>
-                                
+                                 <!--
+                                <button class="btn btn-dark" (click)="open(content, unEduc.id)" *ngIf="isLogged">Editar</button>
+                                -->
                                 <button type="button" class="btn btn-dark" (click)="deleteEdu(unEduc.id)" *ngIf="isLogged">
                                   Borrar
                                 </button>
