@@ -1,7 +1,9 @@
 {
   "projects": {
-    "default": "portfolio-ap-df992",
-    "portfolioAP": "portfolio-ap-df992"
+    "default": "primer-angular-d83ad",
+    "portfolioAP": "portfolio-ap-df992",
+    "PrimerPortfolio": "primer-angular-d83ad",
+    "PortfolioAP": "portfolio-ap-df992"
   },
   "targets": {}
 }

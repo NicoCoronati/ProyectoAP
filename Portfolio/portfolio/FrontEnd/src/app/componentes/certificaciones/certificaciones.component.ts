@@ -9,13 +9,14 @@ import { CertifService } from 'src/app/servicios/certif.service';
 })
 export class CertificacionesComponent implements OnInit {
 
-  certif: certif[] = [];
+  certifaciones: certif[] = [];
 
   constructor(public certifService: CertifService) { }
 
   ngOnInit(): void {
     //subscribe conecta al observable, escucha cambios y cuando se hacen los pasa al service
-    this.certifService.getListaCertificacion().subscribe(data => {this.certif = data})
+    this.certifService.getListaCertificacion().subscribe(data => {this.certifaciones = data})
+    
   }
 
 }

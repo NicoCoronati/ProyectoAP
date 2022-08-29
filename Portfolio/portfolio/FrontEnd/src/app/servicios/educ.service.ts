@@ -36,7 +36,7 @@ export class EducService {
   }
 
   public update(id: number, educ: educ): Observable<any>{
-    return this.http.put<any>(this.URL + 'editar/' + id, educ);
+    return this.http.put<any>(this.URL + `editar/${id}`, educ);
   }
 
   public delete(id: number): Observable<any>{

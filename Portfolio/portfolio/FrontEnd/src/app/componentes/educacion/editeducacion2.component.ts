@@ -1,45 +1,43 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { educ } from 'src/app/model/educ.model';
 import { EducService } from 'src/app/servicios/educ.service';
-import { FormsModule } from '@angular/forms';
-
 
 @Component({
-  selector: 'app-editeducacion',
-  templateUrl: './editeducacion.component.html',
-  styleUrls: ['./editeducacion.component.css']
+  selector: 'app-editeducacion2',
+  templateUrl: './editeducacion2.component.html',
+  styleUrls: ['./editeducacion2.component.css']
 })
-export class EditeducacionComponent implements OnInit {
+export class Editeducacion2Component implements OnInit {
 
   educa: educ = null;
-  titulo: string = '';
-
-  constructor(private educService: EducService, private activatedRouter: ActivatedRoute,
-    private router: Router) { }
+  
+  constructor(private educService: EducService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educService.getEducacionId(id).subscribe(
-      data =>{
+      data => {
         this.educa = data;
-      }, err =>{
-        alert("Error al modificar educación");
+      }, err => {
+        alert("error");
         this.router.navigate(['']);
       }
     )
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educService.update(id, this.educa).subscribe(
       data => {
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar educación");
-         this.router.navigate(['']);
+      }, err => {
+        alert("error");
+        this.router.navigate(['']);
       }
     )
   }
+
 
 }

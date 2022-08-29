@@ -19,6 +19,7 @@ import { interceptorProvider } from './servicios/interceptor-service';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
 
 import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Editeducacion2Component } from './componentes/educacion/editeducacion2.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     HomeComponent,
     NewEducacionComponent,
+    Editeducacion2Component,
   ],
   imports: [
     BrowserModule,

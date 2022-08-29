@@ -36,7 +36,7 @@
                                 </span>
                                 
                                 <div>
-                                <button type="button" class="btn btn-dark" *ngIf="isLogged">
+                                <button type="button" class="btn btn-dark" routerLink="/editedu/{{unEduc.id}}" *ngIf="isLogged">
                                   Editar
                                 </button>
                                  <button class="btn btn-dark" (click)="open(content, unEduc.id)" *ngIf="isLogged">Editar</button>
