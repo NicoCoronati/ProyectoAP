@@ -59,7 +59,7 @@ export class EducacionComponent implements OnInit {
   }
 
   onUpdate(): void{
-    //const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['id'];
     this.educService.update(this.idActual, this.unaEduc).subscribe(data =>{}, err => {
       alert("")
     }
@@ -76,6 +76,7 @@ export class EducacionComponent implements OnInit {
       this.educService.delete(id).subscribe(data => {this.router.navigate(['']);}, 
       )
     }
+    this.router.navigate(['']);
   }
 }
 

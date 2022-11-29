@@ -33,7 +33,7 @@ export class Editeducacion2Component implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err => {
-        alert("error2");
+        alert("error");
         this.router.navigate(['']);
       }
     )
