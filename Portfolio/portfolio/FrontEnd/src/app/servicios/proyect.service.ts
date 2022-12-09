@@ -12,7 +12,7 @@ import { proyect } from '../model/proyect.model';
 export class ProyectService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'https://mysterious-chamber-26526.herokuapp.com/proyectos/';
+  URL = 'https://ap-portfolio-nicocoronati.koyeb.app/proyectos/';
   
   
   constructor(private http: HttpClient) { }

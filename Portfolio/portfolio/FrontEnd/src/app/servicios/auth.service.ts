@@ -9,8 +9,8 @@ import { Nuevousuario } from '../model/nuevousuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://mysterious-chamber-26526.herokuapp.com/auth/'
-
+  //authURL = 'https://mysterious-chamber-26526.herokuapp.com/auth/'
+  authURL = 'https://ap-portfolio-nicocoronati.koyeb.app/auth/'
 
   constructor(private httpClient: HttpClient) { }
 

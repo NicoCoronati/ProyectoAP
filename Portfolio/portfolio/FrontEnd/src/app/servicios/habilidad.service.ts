@@ -12,7 +12,7 @@ import { habilidad } from '../model/habilidad.model';
 export class HabilidadService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'https://mysterious-chamber-26526.herokuapp.com/habilidades/';
+  URL = 'https://ap-portfolio-nicocoronati.koyeb.app/habilidades/';
   
   
   constructor(private http: HttpClient) { }

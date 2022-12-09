@@ -12,7 +12,9 @@ import { certif } from '../model/certif.model';
 export class CertifService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'https://mysterious-chamber-26526.herokuapp.com/certificaciones/';
+  //URL = 'https://mysterious-chamber-26526.herokuapp.com/certificaciones/';
+  URL = 'https://ap-portfolio-nicocoronati.koyeb.app/certificaciones/';
+  
   
   
   constructor(private http: HttpClient) { }

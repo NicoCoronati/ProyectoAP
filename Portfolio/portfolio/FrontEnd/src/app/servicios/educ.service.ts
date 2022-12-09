@@ -12,7 +12,7 @@ import { educ } from '../model/educ.model';
 export class EducService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'https://mysterious-chamber-26526.herokuapp.com/educaciones/';
+  URL = 'https://ap-portfolio-nicocoronati.koyeb.app/educaciones/';
   
   
   constructor(private http: HttpClient) { }
@@ -35,9 +35,14 @@ export class EducService {
     return this.http.post<any>(this.URL + 'crear', educ);
   }
 
-  public update(id: number, educ: educ): Observable<any>{
+  public updateold(id: number, educ: educ): Observable<any>{
     return this.http.put<any>(this.URL + `editar/${id}`, educ);
   }
+
+  public update(id: number, educ: educ): Observable<any>{
+    return this.http.put<any>(this.URL + `editar/${id}?nombre_escuela=${educ.nombre_escuela}&url_foto=${educ.url_foto}&titulo=${educ.titulo}&fecha=${educ.fecha}`, educ);
+  }
+
 
   public delete(id: number): Observable<any>{
     return this.http.delete<any>(this.URL + 'borrar/' + id);

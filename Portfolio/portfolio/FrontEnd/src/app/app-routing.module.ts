@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'nueva_educacion', component: NewEducacionComponent},
-  { path: 'editedu/:id', component: Editeducacion2Component}
+  { path: 'editedu/:id', component: Editeducacion2Component},
+  { path: 'borrar', component: HomeComponent}
 ];
 
 @NgModule({
