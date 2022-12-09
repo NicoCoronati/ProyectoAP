@@ -27,23 +27,11 @@ export class NewEducacionComponent implements OnInit {
       alert("educación añadida");
       this.router.navigate(['']);
     }, err => {
-      alert("Falló");
+      
       this.router.navigate(['']);
     }
     )
   }
 
-  onCreatee(): void {
-    const edu = new educ(this.nombre_escuela, this.url_foto, this.titulo, this.fecha);
-    this.educService.save(edu).subscribe(
-      data => {
-        alert("Experiencia añadida");
-        this.router.navigate(['']);
-      }, err => {
-        alert("Falló");
-        this.router.navigate(['']);
-      }
-    )
-  }
 
 }

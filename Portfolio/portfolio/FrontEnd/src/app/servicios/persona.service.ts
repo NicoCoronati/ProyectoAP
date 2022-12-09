@@ -12,7 +12,7 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
 
   //Dejar en 8080 no importa q uses 4200 es del tomcat creo
-  URL = 'http://localhost:8080/personas/';
+  URL = 'https://ap-portfolio-nicocoronati.koyeb.app/personas/';
   
   
   constructor(private http: HttpClient) { }

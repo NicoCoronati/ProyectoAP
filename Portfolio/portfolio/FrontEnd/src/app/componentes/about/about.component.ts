@@ -10,6 +10,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 export class AboutComponent implements OnInit {
   textacercade:string = 'Soy estudiante de Ingeniería en Sistemas en la UTN FRC, tengo 21 años, me gusta programar desde los 11 años, momento que quise tener mi propio Argentum Online, practique atletismo a un nivel competitivo y me gusta mucho la música.       ?¿??¿';
   
+  //persona: persona = new persona("", "", "", "", "", 1, "", "", "");
   persona: persona = new persona("", "", "", "", "", 1, "", "", "");
 
   constructor(public personaService: PersonaService) { }

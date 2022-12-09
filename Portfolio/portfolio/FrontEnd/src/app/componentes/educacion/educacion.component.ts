@@ -45,7 +45,6 @@ export class EducacionComponent implements OnInit {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
 
@@ -60,7 +59,7 @@ export class EducacionComponent implements OnInit {
   }
 
   onUpdate(): void{
-    //const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRouter.snapshot.params['id'];
     this.educService.update(this.idActual, this.unaEduc).subscribe(data =>{}, err => {
       alert("")
     }
@@ -77,6 +76,7 @@ export class EducacionComponent implements OnInit {
       this.educService.delete(id).subscribe(data => {this.router.navigate(['']);}, 
       )
     }
+    this.router.navigate(['']);
   }
 }
 
