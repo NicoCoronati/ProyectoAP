@@ -20,6 +20,11 @@ import { NewEducacionComponent } from './componentes/educacion/new-educacion.com
 
 import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Editeducacion2Component } from './componentes/educacion/editeducacion2.component';
+import { EditPersonaComponent } from './edit-persona/edit-persona.component';
+import { NuevahabilidadComponent } from './componentes/habilidades/nuevahabilidad/nuevahabilidad.component';
+import { EdithabilidadComponent } from './componentes/habilidades/edithabilidad/edithabilidad.component';
+import { NewexpecienciaComponent } from './componentes/experiencia/newexpeciencia/newexpeciencia.component';
+import { EditexperienciaComponent } from './componentes/experiencia/editexperiencia/editexperiencia.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { Editeducacion2Component } from './componentes/educacion/editeducacion2.
     HomeComponent,
     NewEducacionComponent,
     Editeducacion2Component,
+    EditPersonaComponent,
+    NuevahabilidadComponent,
+    EdithabilidadComponent,
+    NewexpecienciaComponent,
+    EditexperienciaComponent,
   ],
   imports: [
     BrowserModule,

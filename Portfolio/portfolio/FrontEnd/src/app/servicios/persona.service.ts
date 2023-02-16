@@ -18,9 +18,15 @@ export class PersonaService {
   constructor(private http: HttpClient) { }
 
   //observable maneja peticiones y respuestas
-  public getPersona(): Observable<persona>{
+  public getPersona(id: number): Observable<persona>{
 
-    return this.http.get<persona>(this.URL+'traer/perfil/1');
+    return this.http.get<persona>(this.URL+`traer/perfil/${id}`);
 
   }
+
+  public update(id: number, persona: persona): Observable<any>{
+    return this.http.put<any>(this.URL + `editar/${id}?nombre=${persona.nombre}&apellido=${persona.apellido}&ocupacion=${persona.ocupacion}&sobre_mi=${persona.sobre_mi}&url_perfil=${persona.url_perfil}`, persona);
+  }
+
+
 }

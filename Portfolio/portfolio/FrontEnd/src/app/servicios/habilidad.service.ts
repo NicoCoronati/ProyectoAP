@@ -24,9 +24,22 @@ export class HabilidadService {
 
   }
 
-  public getHabilidadId(): Observable<habilidad>{
+  public getHabilidadId(id: number): Observable<habilidad>{
 
-    return this.http.get<habilidad>(this.URL+'traer/perfil/1');
+    return this.http.get<habilidad>(this.URL+'traer/perfil/'+id);
 
+  }
+
+  public save(habilidad: habilidad): Observable<any>{
+    return this.http.post<any>(this.URL + 'crear', habilidad);
+  }
+
+  public update(id: number, habilidad: habilidad): Observable<any>{
+    return this.http.put<any>(this.URL + `editar/${id}?nombre=${habilidad.nombre}&porcentaje=${habilidad.porcentaje}`, habilidad);
+  }
+
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete<any>(this.URL + 'borrar/' + id);
   }
 }

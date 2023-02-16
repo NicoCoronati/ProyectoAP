@@ -1,4 +1,102 @@
 <div class="container">
+  <div class="p-md-5 mb-4 text-white rounded bg-dark testmarg">
+      <div class="col-md-6 px-0">
+  
+  
+          <div class="container">
+          <h1 class="display-6">Experiencia Laboral</h1>
+          <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nueva_experiencia" *ngIf="isLogged">
+              Nueva Experiencia
+            </button>
+            
+          </div>
+
+                  <!---->
+              
+                  <ul *ngFor="let unaExpe of expe">
+                    <div class="col-md-12 p-4 mb-3 bg-secondary rounded ml-2" >
+                      <div class="container">
+                        
+                        <li class="profile-section-card" >
+                                    
+                              <div class="">
+                                <h3 class="">
+                                  <!--agregando mas llamadas a DB-->
+                                {{unaExpe.nombre_expe}}
+                              
+                                </h3>
+                                  <h4 class="">
+                                    <span class="">{{unaExpe.actividad}}</span><!---->      
+                                  </h4>
+                              <span class="">
+                                <time>{{unaExpe.fecha}}</time>
+                              </span>
+                              
+                              <div>
+                              <button type="button" class="btn btn-dark" routerLink="/editexpe/{{unaExpe.id}}" *ngIf="isLogged">
+                                Editar
+                              </button>
+                               <!--
+                              <button class="btn btn-dark" (click)="open(content, unEduc.id)" *ngIf="isLogged">Editar</button>
+                              -->
+                              <button type="button" class="btn btn-dark" routerLink="/borrar" (click)="deleteExpe(unaExpe.id)" *ngIf="isLogged">
+                                Borrar
+                              </button>
+                            </div>
+                            
+                              </div>
+                              
+                        </li>
+                      </div>
+                    </div>
+                  </ul>      
+                
+                  
+
+          </div>
+
+          <!-- MODAL PARA HACERLO SIN IR A OTRA URL, EN UN FORM EMERGENTE. 
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Editar Educación</h4>
+              <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="mb-3">
+                  <label for="nombre_expe">Lugar de la experiencia laboral</label>
+                  <div class="input-group">
+                  <input type="text" class="form-control" id="nombre_expe" name="nombre_expe" [(ngModel)]="unaExpe.nombre_expe" required>
+                  </div>
+                  <label for="actividad">Actividad</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="actividad" name="actividad" [(ngModel)]="unaExpe.actividad" required>
+                  </div>
+                  <label for="fecha">Fecha desde y fecha hasta</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="fecha" name="fecha" [(ngModel)]="unaExpe.fecha" required>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Guardar</button>
+                </div>
+              </form>
+            </div>
+            
+          </ng-template>
+          
+          
+          
+          <hr>
+          
+          <pre>{{ closeResult }}</pre>
+          -->
+
+<!-- EXPERIENCIAS ANTES DE HACERLO CRUD.
+<div class="container">
     <div class="p-md-5 mb-4 text-white rounded bg-dark testmarg">
         <div class="col-md-6 px-0">
     
@@ -18,5 +116,4 @@
         
         </div>
       </div>
-      
-    <!-- </div> -->
+      -->
